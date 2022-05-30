@@ -1,14 +1,111 @@
 body{
-    background-color: white;
+  font-family: Roboto;
+  background-color: white;
+  margin: 0px;
+}
+
+h1{
+  font-family: shrikhand;
+  font-size:larger;
+}
+
+h4{
+  margin: 0;
+}
+
+p{
+  font-size:14px;
+}
+
+header{ 
+  display: flex;
+justify-content: flex-start;
+box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
+}
+
+.logo{
+  padding-left: 22%;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  padding-left: 7px;
+
+}
+
+header a {
+  color: rgb(0, 0, 0);
+align-self: center;
+padding-left: 5px;
+}
+
+
+.reservation h3{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top:10px
+}
+
+
+.reservation-map{
+  background-color: rgb(248, 248, 248);
+text-align: center;
+padding-bottom: 40px;
 }
 
 .map{
-  background-color: lightgrey;
+  background-color: rgb(221, 221, 221);
+  padding: 8px;
 }
 
-.explore, .commander {
-  background-color: rgb(201, 0, 201);
+.map p {
+  padding: 0;
+  margin: 0;
+  cursor : pointer
+}
+
+.choix-restaurant{
+  background-color: rgb(248, 248, 248);
+  padding-bottom: 30px;
+
+}
+
+.menu-restaurant{
+  border-radius: 20px 20px 0px 0px;
+  width: 95%;
+  margin-left:auto ;
+  margin-right: auto;
+ }
+
+
+.explore, .commander{
   color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  justify-content: space-around;
+  box-shadow: 2px 2px 8px 2px  lightgrey;
+  cursor: pointer;
+}
+
+.commander{
+  margin: 30px;
+
+}
+
+.commander p{
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0;
+
+}
+
+.container-commande{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
 }
 
 .card{
@@ -16,7 +113,8 @@ body{
     border-radius: 15px;
     color: rgb(0, 0, 0);
     text-decoration: none;
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     display: block;
 
     box-shadow: 2px 2px 8px 2px  lightgrey;
@@ -24,7 +122,35 @@ body{
   }
 
 .card-body{
-  padding-left:5px;
+  padding:8px;
+}
+
+.card-body p{
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.menu-choix{
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.menu-choix .card{
+  box-shadow: 2px 3px 8px 0px lightgrey;
+  border-radius: 12px;
+}
+
+
+.menu-choix .card-body{
+  padding: 15px;
+}
+
+.menu-choix .card-body h4{
+  font-size: 14px;
 }
 
   img {
@@ -33,23 +159,53 @@ body{
     border-radius: 15px 15px 0 0;
   }
 
+
 footer{
-    background-color: #2d2d2d;
-color: white;
+  padding-top: 10px;
+  background-color: #2d2d2d;
+  color: white;
+padding-left: 20px;
+
+}
+
+footer h4{
+  font-family: shrikhand;
+  font-weight:lighter;
 }
 
 footer ul{
     list-style-type: none;
+    padding: 0;
 }
+
+footer li{
+  padding-bottom:8px ;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+  font-size: small;
+}
+
+footer a:hover{
+  color: #9356DC;
+}
+
+
+
 
 @media screen and (max-width:768px){
 
-  .logo img {
-    width: 180px;
-    height: auto;
+
+  header button{
+    justify-content: flex-start;
 
   }
 
+  .image-menu img{
+width: 100%;
+  }
 
 
 }
