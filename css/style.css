@@ -17,21 +17,18 @@ p{
   font-size:14px;
 }
 
-header{ 
-  display: flex;
-justify-content: flex-start;
-box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
-}
-
-.logo{
-  padding-left: 22%;
-}
 
 .logo img {
-  width: 150px;
+  width: 250px;
   height: auto;
-  padding-left: 7px;
+}
 
+header{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  box-shadow: 10px 10px black;
 }
 
 header a {
@@ -39,14 +36,6 @@ header a {
 align-self: center;
 padding-left: 5px;
 }
-
-
-.reservation h3{
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top:10px
-}
-
 
 .reservation-map{
   background-color: rgb(248, 248, 248);
@@ -57,18 +46,15 @@ padding-bottom: 40px;
 .map{
   background-color: rgb(221, 221, 221);
   padding: 8px;
+  margin-left: 42%;
+  margin-right: 42%;
+  border-radius: 20px;
 }
 
 .map p {
   padding: 0;
   margin: 0;
   cursor : pointer
-}
-
-.choix-restaurant{
-  background-color: rgb(248, 248, 248);
-  padding-bottom: 30px;
-
 }
 
 .menu-restaurant{
@@ -90,10 +76,7 @@ padding-bottom: 40px;
   cursor: pointer;
 }
 
-.commander{
-  margin: 30px;
 
-}
 
 .commander p{
   padding-left: 30px;
@@ -109,17 +92,15 @@ padding-bottom: 40px;
 }
 
 .card{
-    background-color: rgb(255, 255, 255);
-    border-radius: 15px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: block;
-
-    box-shadow: 2px 2px 8px 2px  lightgrey;
-
-  }
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+  box-shadow: 2px 2px 8px 2px  lightgrey;
+}
 
 .card-body{
   padding:8px;
@@ -132,31 +113,54 @@ padding-bottom: 40px;
   margin: 0;
 }
 
-.menu-choix{
-  width:90%;
+
+
+.choix-restaurant{
+  background-color: rgb(248, 248, 248);
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.choix-restaurant .column{
+  display: flex;
+}
+
+.choix-restaurant .card img{
+  border-radius: 10px 10px 0px 0px;
+}
+
+.menu{
+  width:50%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
   margin-bottom: 50px;
 }
-.menu-choix .card{
+
+.menu .card{
   box-shadow: 2px 3px 8px 0px lightgrey;
   border-radius: 12px;
 }
 
+.commander{
+  margin: 30px;
+}
 
-.menu-choix .card-body{
+.menu .card-body{
   padding: 15px;
 }
 
-.menu-choix .card-body h4{
+.menu .card-body h4{
   font-size: 14px;
 }
 
   img {
-    width: 100%;
+    width: 320px;
     height: 190px;
-    border-radius: 15px 15px 0 0;
+    object-fit: cover;
   }
 
 
@@ -164,8 +168,7 @@ footer{
   padding-top: 10px;
   background-color: #2d2d2d;
   color: white;
-padding-left: 20px;
-
+  padding-left: 20px;
 }
 
 footer h4{
@@ -193,19 +196,78 @@ footer a:hover{
 }
 
 
+@media screen and (max-width:992px) {
+  
+}
 
 
 @media screen and (max-width:768px){
 
+  main{
+display: block;
+  }
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  p{
+    font-size:13px;
+  }
+
+  .logo img {
+    width: 150px;
+    height: auto;
+    padding-left: 7px;
+  
+  }
+
+  header{ 
+    display: flex;
+  justify-content: space-around;
+  box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
+  padding-top: 15px;
+  padding-bottom: 5px;
+  }
 
   header button{
     justify-content: flex-start;
+  }
+
+.map{
+  margin: 0;
+  border-radius: 0;
+}
+
+  .reservation p{
+    font-size: medium;
+    padding-left: 15px;
+    padding-right: 15px;
 
   }
+
+.menu{
+  width: 90%;
+}
 
   .image-menu img{
 width: 100%;
   }
 
+.choix-restaurant .column{
+    display: block;
+  }
 
+
+
+  .reservation h3{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top:10px
+  }
+
+  footer{
+  padding-top: 10px;
+  padding-left: 20px;
+  }
 }
