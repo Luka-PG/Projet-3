@@ -11,7 +11,6 @@ body{
 
 h1{
   font-family: shrikhand;
-  font-size:larger;
 }
 
 h4{
@@ -28,7 +27,14 @@ p{
 }
 
 .bouton-retour{
-position: absolute;
+  margin-left: 15px;
+  position: absolute;
+  font-size: x-large;
+}
+
+header .logo{
+  width: 100%;
+  text-align: center;
 }
 
 header{
@@ -68,12 +74,53 @@ header a {
   cursor : pointer
 }
 
+.icon-liste{
+  align-items: center;
+}
+
+.menu-nav{
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.menu-nav h3{
+  text-align:center;
+}
+
+.menu-nav .card{
+  box-shadow: 2px 3px 8px 0px lightgrey;
+  border-radius: 12px;
+}
+
 .menu-restaurant{
   border-radius: 20px 20px 0px 0px;
   width: 95%;
   margin-left:auto ;
   margin-right: auto;
  }
+
+ .text-image{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.text-image .nouveau{
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background-color: #99E2D0;
+  color: #28856e;
+  font-weight: bold;
+  font-size: small;
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 2px 2px 2px 2px;
+}
 
 .explore, .commander{
   color: white;
@@ -95,7 +142,7 @@ header a {
 .container-commande{
   display: flex;
   justify-content: space-around;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .card{
@@ -110,7 +157,10 @@ header a {
 }
 
 .card-body{
-  padding:8px;
+  padding:10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card-body p{
@@ -146,17 +196,45 @@ header a {
   object-fit:cover;
 }
 
-.menu-nav{
-  width:50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  margin-bottom: 50px;
+.coeur-icons-menu{
+  text-decoration: none;
+  color:black;
 }
 
-.menu-nav .card{
-  box-shadow: 2px 3px 8px 0px lightgrey;
-  border-radius: 12px;
+.coeur-icon{
+  padding:10px;
+  font-size: 20px
+}
+
+.menu-restaurant-titre{
+  display: block;
+}
+
+.menu-restaurant-titre{
+  text-align: center;
+}
+
+.menu-restaurant .column{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-restaurant h3, h1{
+  text-align: center;
+}
+
+.menu-restaurant h3{
+  text-decoration: underline;
+  text-decoration-color: #99E2D0;
+  text-decoration-thickness:3px;
+}
+
+.menu-restaurant h1{
+  font-size: x-large;
+  text-align: center;
 }
 
 .menu-restaurant .card-body {
@@ -164,8 +242,6 @@ header a {
   padding-bottom: 5px;
   display: flex;
   justify-content: space-between;
-  text-overflow: ellipsis;
-  overflow: hidden;  
 }
 
 .menu-restaurant .card-body p{
@@ -173,7 +249,7 @@ header a {
 }
 
 .commander{
-  margin: 30px;
+  margin: 50px;
 }
 
 .menu-nav .card-body{
@@ -207,6 +283,7 @@ footer ul{
   list-style-type: none;
   padding: 0;
   margin: 0;
+  padding-top: 12px;
 }
 
 footer li{
@@ -234,7 +311,7 @@ footer a:hover{
 }
 
 .menu-nav h3{
-  text-align: center;
+  text-align: start;
 }
 
 .choix-restaurant .column{
@@ -246,10 +323,6 @@ footer a:hover{
 
 @media screen and (max-width:768px){
 
-  main{
-display: block;
-  }
-
 p{
   font-size:13px;
 }
@@ -259,11 +332,31 @@ p{
   height: auto;
 }
 
+.bouton-retour{
+  margin-left: 15px;
+  margin-bottom: 5px;
+  position: absolute;
+  font-size: medium;
+}
+
+header .logo{
+  width: 100%;
+  text-align: center;
+}
+
 header{ 
+  width: 100%;
   display: flex;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  padding:0px;
   padding-top: 15px;
   padding-bottom: 5px;
+}
+
+.choix-restaurant .card img{
+  height: 180px;
+  width: 100%;
+  text-align: center;
 }
 
 .reservation-map{
@@ -289,9 +382,20 @@ header{
   width: 100%;
 }
 
+.choix-restaurant h3 {
+  width: 90%;
+  margin: auto auto 20px ;
+  padding-top: 50px;
+}
+
+.choix-restaurant{
+  display: block;
+}
+
 .choix-restaurant .column{
   display: block;
-  width: 90%;
+  width: 92%;
+  margin: auto auto
 }
   
 .choix-restaurant .card{
@@ -313,6 +417,13 @@ header{
   box-sizing: border-box;
 }
 
+.menu-restaurant-titre{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
 .menu-restaurant{
   margin-top: -40px;
   padding-top: 2px;
@@ -324,9 +435,21 @@ header{
   box-sizing: border-box;
 }
 
-  footer{
+.menu-restaurant .card{
+  margin-bottom:0;
+}
+
+.menu-restaurant .column{
+  width: 100%;
+}
+
+.menu-restaurant h3, h1{
+  text-align:start;
+}
+
+footer{
   padding-top: 10px;
   padding-left: 20px;
-  }
+}
 
 }
