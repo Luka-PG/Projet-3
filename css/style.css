@@ -2,6 +2,11 @@ body{
   font-family: Roboto;
   background-color: white;
   margin: 0px;
+  padding:0;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 h1{
@@ -17,30 +22,36 @@ p{
   font-size:14px;
 }
 
-
 .logo img {
   width: 250px;
   height: auto;
 }
 
+.bouton-retour{
+position: absolute;
+}
+
 header{
   display: flex;
-  justify-content: center;
-  padding: 10px;
+  align-items: center;
+  padding: 8px;
   border-bottom: 1px solid white;
-  box-shadow: 10px 10px black;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  top:0;
 }
 
 header a {
   color: rgb(0, 0, 0);
-align-self: center;
-padding-left: 5px;
 }
 
 .reservation-map{
   background-color: rgb(248, 248, 248);
-text-align: center;
-padding-bottom: 40px;
+  text-align: center;
+  padding-bottom: 40px;
+  margin-top: 65px;
 }
 
 .map{
@@ -64,7 +75,6 @@ padding-bottom: 40px;
   margin-right: auto;
  }
 
-
 .explore, .commander{
   color: white;
   padding: 15px;
@@ -76,13 +86,10 @@ padding-bottom: 40px;
   cursor: pointer;
 }
 
-
-
-.commander p{
-  padding-left: 30px;
-  padding-right: 30px;
+.commander{
+  padding-left: 45px;
+  padding-right: 45px;
   margin: 0;
-
 }
 
 .container-commande{
@@ -113,8 +120,6 @@ padding-bottom: 40px;
   margin: 0;
 }
 
-
-
 .choix-restaurant{
   background-color: rgb(248, 248, 248);
   padding-bottom: 30px;
@@ -122,17 +127,26 @@ padding-bottom: 40px;
   flex-direction: column;
   width: 100%;
   align-items: center;
+  margin: 0 auto;
 }
 
 .choix-restaurant .column{
   display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.choix-restaurant .card{
+  margin:10px;
+  width: 100%;
 }
 
 .choix-restaurant .card img{
   border-radius: 10px 10px 0px 0px;
+  object-fit:cover;
 }
 
-.menu{
+.menu-nav{
   width:50%;
   margin-left: auto;
   margin-right: auto;
@@ -140,32 +154,45 @@ padding-bottom: 40px;
   margin-bottom: 50px;
 }
 
-.menu .card{
+.menu-nav .card{
   box-shadow: 2px 3px 8px 0px lightgrey;
   border-radius: 12px;
+}
+
+.menu-restaurant .card-body {
+  padding: 10px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  text-overflow: ellipsis;
+  overflow: hidden;  
+}
+
+.menu-restaurant .card-body p{
+  align-self: flex-end;
 }
 
 .commander{
   margin: 30px;
 }
 
-.menu .card-body{
+.menu-nav .card-body{
   padding: 15px;
 }
 
-.menu .card-body h4{
+.menu-nav .card-body h4{
   font-size: 14px;
 }
 
-  img {
-    width: 320px;
-    height: 190px;
-    object-fit: cover;
-  }
-
+img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
 
 footer{
   padding-top: 10px;
+  padding-bottom: 30px;
   background-color: #2d2d2d;
   color: white;
   padding-left: 20px;
@@ -177,8 +204,9 @@ footer h4{
 }
 
 footer ul{
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 footer li{
@@ -195,11 +223,26 @@ footer a:hover{
   color: #9356DC;
 }
 
-
 @media screen and (max-width:992px) {
   
+.map{
+  background-color: rgb(221, 221, 221);
+  padding: 8px;
+  margin-left: 35%;
+  margin-right: 35%;
+  border-radius: 20px;
 }
 
+.menu-nav h3{
+  text-align: center;
+}
+
+.choix-restaurant .column{
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+}
 
 @media screen and (max-width:768px){
 
@@ -207,67 +250,83 @@ footer a:hover{
 display: block;
   }
 
-  ::-webkit-scrollbar{
-    display: none;
-  }
+p{
+  font-size:13px;
+}
 
-  p{
-    font-size:13px;
-  }
+.logo img {
+  width: 150px;
+  height: auto;
+}
 
-  .logo img {
-    width: 150px;
-    height: auto;
-    padding-left: 7px;
-  
-  }
-
-  header{ 
-    display: flex;
-  justify-content: space-around;
-  box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
+header{ 
+  display: flex;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   padding-top: 15px;
   padding-bottom: 5px;
-  }
+}
 
-  header button{
-    justify-content: flex-start;
-  }
+.reservation-map{
+  margin-top: 50px;
+}
 
 .map{
   margin: 0;
   border-radius: 0;
 }
 
-  .reservation p{
-    font-size: medium;
-    padding-left: 15px;
-    padding-right: 15px;
+.reservation p{
+  font-size: medium;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-  }
-
-.menu{
+.menu-nav{
   width: 90%;
 }
 
-  .image-menu img{
-width: 100%;
-  }
+.image-menu img{
+  width: 100%;
+}
 
 .choix-restaurant .column{
-    display: block;
-  }
+  display: block;
+  width: 90%;
+}
+  
+.choix-restaurant .card{
+  margin: 0;
+  margin-bottom: 25px;
+}
 
+.reservation h3{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top:10px
+}
 
+.menu-image img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
 
-  .reservation h3{
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top:10px
-  }
+.menu-restaurant{
+  margin-top: -40px;
+  padding-top: 2px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 35px 35px 0px 0px;
+  background-color: white;
+  position: relative;
+  box-sizing: border-box;
+}
 
   footer{
   padding-top: 10px;
   padding-left: 20px;
   }
+
 }
