@@ -94,6 +94,49 @@ header a {
   border-radius: 20px;
 }
 
+.menu-nav .icon-liste {
+  border: #9356DC 1px solid;
+  border-radius: 50px;
+  margin-left: -28px;
+  padding: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: white;
+  background-color: #9356DC;
+}
+
+.icone-nav {
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.menu-nav .card:hover {
+background-color: #b995e41f;
+}
+
+.menu-nav .icone-nav:hover {
+  color: #9356DC;
+}
+
+.menu-nav .card-body {
+  padding: 15px;
+  justify-content: flex-start;
+}
+
+.menu-nav .card-body h4 {
+  font-size: 14px;
+}
+
+.nav-body{
+  display:flex;
+  align-items: center;
+}
+
+.nav-body:hover{
+  color: #9356DC;
+}
+
 .menu-restaurant {
   border-radius: 20px 20px 0px 0px;
   margin-left: auto;
@@ -286,40 +329,6 @@ header a {
     margin: 50px;
 }
 
-.menu-nav .icon-liste {
-  border: #9356DC 1px solid;
-  border-radius: 50px;
-  margin-left: -28px;
-  padding: 3px;
-  padding-left: 8px;
-  padding-right: 8px;
-  color: white;
-  background-color: #9356DC;
-}
-
-.icone-nav {
-  padding: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-.menu-nav .card:hover {
-background-color: #b995e41f;
-}
-
-.menu-nav .icone-nav:hover {
-  color: #9356DC;
-}
-
-.menu-nav .card-body {
-  padding: 15px;
-  justify-content: flex-start;
-}
-
-.menu-nav .card-body h4 {
-  font-size: 14px;
-}
-
 img {
   width: 100%;
   height: 210px;
@@ -360,6 +369,46 @@ footer a:hover {
   color: #9356DC;
 }
 
+#loading {
+  display: inline-block;
+  width:150px;
+  height:150px;
+  border: 5px solid rgba(201, 149, 236, 0.3);
+  border-radius: 50%;
+  border-top-color: rgb(224, 142, 211);
+  animation: spin 1s ease-in-out infinite;
+  position: absolute;
+  right: 46%;
+  bottom: 45%;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+ .animated{
+  opacity: 0; 
+  background: white;
+  animation: fadeIn 1s normal forwards step-end;
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+
+0% {
+  opacity: 1;
+}
+ 
+100% {
+  opacity: 1;
+}
+
+}
+
+
 @media screen and (max-width:992px) {
     
   .map {
@@ -381,6 +430,11 @@ footer a:hover {
   .menu-restaurant .column {
     width: 85%;
   }
+
+  #loading {
+    right: 40%;
+    bottom: 40%;
+    }
 
 }
 
@@ -514,4 +568,8 @@ footer a:hover {
     padding-left: 20px;
   }
 
+  #loading {
+  right: 25%;
+  bottom: 40%;
+  }
 }
