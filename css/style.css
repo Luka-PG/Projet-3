@@ -150,6 +150,19 @@ color:black
   box-sizing: border-box;
 }
 
+.menu-restaurant .column .card{
+  animation: showMe 2.5s forwards;
+}
+
+@keyframes showMe{
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
 .menu-restaurant-titre {
   display: block;
   text-align: center;
@@ -184,13 +197,6 @@ color:black
   text-align: center;
 }
 
-.menu-restaurant .card-body{
-  padding: 10px;
-  padding-bottom: 5px;
-}
-
-
-
 .menu-restaurant .card-body p{
   margin: 0;
   padding-top:5px;
@@ -198,46 +204,64 @@ color:black
 }
 
 .menu-restaurant .card-body{
-padding: 10px;
+  padding:0;
+  display: flex;
+  width: 100%;
 }
 
 
+.menu-restaurant .card-body .text-card {
+  padding:9px 6px 6px 10px;
+  padding-bottom:5px;
+  width: 100%;
+}
+
+.menu-restaurant .card-body .prix {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 10px;
+  align-items: flex-end;
+}
 
 .menu-restaurant .card-body .text-card{
   display: flex;
   justify-content: space-between;
+}
 
+.menu-restaurant .card-body .text-card p{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .card-checkmark{
-  align-self: center;
-  position: relative;
-  padding: 12px;
   display: none;
+  width:0%;
   color: white;
+  transition: 0.4s;
 }
 
 .card:hover .card-checkmark{
   display:block;
-  background-color: rgba(115, 214, 201, 0.575);
-  animation: fadein;
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  height: 60px;
+  width:10%;
 }
 
- .card:hover .card-checkmark .checkmark{
-  animation: spin-animation 0.5s;
-  display: inline-block;
-  
+.card:hover .card-checkmark .checkmark{
+  animation: spin-animation 0.2s ;  
+}
+
+.card-checkmark .checkmark{
+  padding: 20px 15px 20px 15px;
 }
 
 @keyframes spin-animation {
   to { -webkit-transform: rotate(360deg); }
 }
-@-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
-}
-
-
-
 
 .text-image {
   position: relative;
@@ -422,7 +446,7 @@ footer a:hover {
   border-top-color: rgb(224, 142, 211);
   animation: spin 2s ease-in-out infinite;
   position: absolute;
-  right: 46%;
+  right: 45%;
   bottom: 45%;
 }
 
@@ -446,6 +470,10 @@ footer a:hover {
   opacity: 1;
 }
  
+50%{
+  opacity: 1;
+}
+
 100% {
   opacity: 1;
 }
@@ -478,12 +506,16 @@ footer a:hover {
   #loading {
     right: 40%;
     bottom: 40%;
-    }
+  }
 
-    .menu-restaurant h3{
-      width: 40%;
-      margin-left: 45%;
-    }
+  .menu-restaurant h3{
+    width: 40%;
+    margin-left: 45%;
+  }
+
+  .card:hover .card-checkmark{
+    width:8%;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -596,13 +628,6 @@ footer a:hover {
     margin-bottom: 0;
   }
 
-
-  .menu-restaurant .card-body .text-card{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
   .menu-restaurant .column {
     width: 98%;
   }
@@ -622,13 +647,18 @@ footer a:hover {
     margin-left: 0;
   }
 
+  .card:hover .card-checkmark{
+    height: 58px;
+    width: 16%;
+  }
+
   footer {
     padding-top: 10px;
     padding-left: 20px;
   }
 
   #loading {
-  right: 30%;
+  right: 28%;
   bottom: 40%;
   }
 }
