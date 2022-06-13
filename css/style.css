@@ -248,7 +248,7 @@ color:black
   background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   height: 60px;
-  width:10%;
+  width:8%;
 }
 
 .card:hover .card-checkmark .checkmark{
@@ -256,7 +256,7 @@ color:black
 }
 
 .card-checkmark .checkmark{
-  padding: 20px 15px 20px 15px;
+  padding: 20px 18px 20px 18px;
 }
 
 @keyframes spin-animation {
@@ -650,6 +650,10 @@ footer a:hover {
   .card:hover .card-checkmark{
     height: 58px;
     width: 16%;
+  }
+
+  .card-checkmark .checkmark{
+    padding: 20px 15px 20px 15px;
   }
 
   footer {
