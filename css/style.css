@@ -486,18 +486,14 @@ footer a:hover {
  .animated{
   opacity: 0; 
   background: white;
-  animation: fadeIn 1s normal forwards step-end;
+  animation: fadeIn 1s normal forwards ;
   animation-delay: 2s;
 }
 
 @keyframes fadeIn {
 
 0% {
-  opacity: 1;
-}
- 
-50%{
-  opacity: 1;
+  opacity: 0;
 }
 
 100% {
